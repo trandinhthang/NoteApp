@@ -17,21 +17,34 @@ import StatusScreen from './src/screens/StatusScreen';
 import NoteScreen from './src/screens/NoteScreen';
 
 const Drawer = createDrawerNavigator();
-
 const DrawerRoutes = () => {
   return (
     <Drawer.Navigator initialRouteName="Home" >
-      <Drawer.Screen name="Home" component={HomeScreen}  />
-      <Drawer.Screen name="Category" component={CategoryScreen} />
-      <Drawer.Screen name="Priority" component={PriorityScreen} />
-      <Drawer.Screen name="Status" component={StatusScreen} />
-      <Drawer.Screen name="Note" component={NoteScreen} />
+      <Drawer.Screen name="Home" component={HomeScreen} 
+                     options={{ drawerIcon: ( {focused,color,size}) =>
+            <Ionicons name="home" color="#e88c02" size={30}/>}} 
+      />
+      <Drawer.Screen name="Category" component={CategoryScreen} 
+                     options={{ drawerIcon: ( {focused,color,size}) =>
+            <Ionicons name="shapes-sharp" color="#e88c02" size={30}/>}} 
+      />
+      <Drawer.Screen name="Priority" component={PriorityScreen} 
+                     options={{ drawerIcon: ( {focused,color,size}) =>
+            <Ionicons name="md-navigate-sharp" color="#e88c02" size={30}/>}} 
+      />
+      <Drawer.Screen name="Status" component={StatusScreen} 
+                     options={{ drawerIcon: ( {focused,color,size}) =>
+            <Ionicons name="md-map-sharp" color="#e88c02" size={30}/>}} 
+      />
+      <Drawer.Screen name="Note" component={NoteScreen} 
+                     options={{ drawerIcon: ( {focused,color,size}) =>
+            <Ionicons name="md-newspaper-sharp" color="#e88c02" size={30}/>}} 
+      />
     </Drawer.Navigator>
   )
 }
 
 const Stack = createStackNavigator();
-
 const App = () => {
   return (
      <NavigationContainer >

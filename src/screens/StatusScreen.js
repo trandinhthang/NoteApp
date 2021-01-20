@@ -5,11 +5,11 @@ import {
 } from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import StatusList from '../components/StatusList'
 const StatusScreen = ({navigation}) =>{
   return (
     <Container>
-      <Header style={{backgroundColor:'orange'}}>
+      <Header style={{backgroundColor:'#029e1c'}}>
         <Left>
           <Ionicons name="menu" size={30} color="white" onPress={() => {navigation.openDrawer()}} />
         </Left>
@@ -17,9 +17,7 @@ const StatusScreen = ({navigation}) =>{
           <Text style={{fontSize:25, color:'white'}} >Status</Text>
         </Body>
       </Header>
-      <View>
-        <Text>TTTTT</Text>
-      </View>
+      <StatusList/>
     </Container>
   )
 }
